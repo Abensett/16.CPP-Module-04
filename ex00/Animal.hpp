@@ -18,11 +18,11 @@
 
 using std::string;
 
-class Animal  
+class Animal
 {
  	public:
 		Animal(void);
-		~Animal(void);
+		virtual ~Animal(void);						// utile pour delete
 		explicit Animal(string name);
 		Animal(const Animal &Animal);
 		Animal &operator=(const Animal &Animal);

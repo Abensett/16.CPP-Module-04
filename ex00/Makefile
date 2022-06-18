@@ -37,7 +37,7 @@ LDFLAGS			=
 #                                SOURCE FILES                                  #
 # **************************************************************************** #
 
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp
+SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJ := $(SRC:.cpp=.o)
 
@@ -51,13 +51,13 @@ DIROBJS	= $(addprefix $(DIROBJ), $(OBJ))
 
 all: 	$(NAME)
 
-$(DIROBJ)%.o:./%.c
-			mkdir -p $(DIROBJ)
-			$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+$(DIROBJ)%.o:./%.cpp
+			@mkdir -p $(DIROBJ)
+			@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
-$(NAME):
-			@printf "\033[2K\r $(_YELLOW)Compiling $< $(_END)⌛"
-			@$(CC) $(CFLAGS) $(SRC) $(INCLUDES)  $(LDFLAGS) -o $@
+$(NAME):	$(DIROBJS)
+			@printf "\033[2K\r $(_YELLOW)Compiling and linking all the files $(_END)⌛"
+			@$(CC) $(CFLAGS) $(DIROBJS) $(INCLUDES)  $(LDFLAGS) -o $@
 			@printf "\n[$(GREEN)OK$(WHITE)] $(NAME) generated \n"
 
 

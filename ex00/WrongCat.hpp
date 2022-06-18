@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                       :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensett <abensett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 15:12:15 by abensett          #+#    #+#             */
-/*   Updated: 2022/06/16 02:02:26 by abensett         ###   ########.fr       */
+/*   Updated: 2022/06/18 20:51:37 by abensett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP_
-#define WRONGANIMAL_HPP_
+#ifndef WRONGCAT_HPP_
+#define WRONGCAT_HPP_
 
-#include <iostream>
-#include <string>
+#include "WrongAnimal.hpp"
 
-using std::string;
-
-class WrongAnimal
+class WrongCat  :  public WrongAnimal
 {
  	public:
-		WrongAnimal(void);
-		~WrongAnimal(void);
-		explicit WrongAnimal(string name);
-		WrongAnimal(const WrongAnimal &WrongAnimal);
-		WrongAnimal &operator=(const WrongAnimal &WrongAnimal);
+		WrongCat(void);
+		~WrongCat(void);
+		explicit WrongCat(string type);
+		WrongCat(const WrongCat &WrongCat);
+		WrongCat &operator=(const WrongCat &WrongCat);
 
 		string 	getType(void) const;
-		void	set_type(string name);
-		void	makeSound(void) const;		// virtual function to be overridden by child classes // non static a la compilation
-											// la resolution devient dynamique	= une méthode
-	protected:
-    	string 	_type;
+		void	set_type(string type);
+		void 	makeSound(void) const;	// virtual function to be overridden by child classes // non static
 };
 
 #endif
