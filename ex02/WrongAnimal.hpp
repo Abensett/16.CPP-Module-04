@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                       :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensett <abensett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,29 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP_
-#define CAT_HPP_
+#ifndef WRONGANIMAL_HPP_
+#define WRONGANIMAL_HPP_
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include <iostream>
+#include <string>
 
+using std::string;
 
-class Cat  : virtual public Animal
+class WrongAnimal
 {
  	public:
-		Cat			(void);
-		virtual ~Cat(void);
-		explicit Cat(string type);
-		Cat			(const Cat &Cat);
-		Cat &operator=(const Cat &Cat);
+		WrongAnimal(void);
+		~WrongAnimal(void);
+		explicit WrongAnimal(string name);
+		WrongAnimal(const WrongAnimal &WrongAnimal);
+		WrongAnimal &operator=(const WrongAnimal &WrongAnimal);
 
-		string 			getType(void) const;
-		void			set_type(string type);
-		virtual void 	makeSound(void) const;	// virtual function to be overridden by child classes // non static
-		void			showIdeas(void) const;	// print first ideas
-	
-	private:
-		Brain	*_Brain;
+		string 	getType(void) const;
+		void	set_type(string name);
+		void	makeSound(void) const;		// virtual function to be overridden by child classes // non static a la compilation
+											// la resolution devient dynamique	= une méthode
+	protected:
+    	string 	_type;
 };
 
 #endif

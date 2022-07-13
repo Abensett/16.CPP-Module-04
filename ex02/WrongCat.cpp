@@ -1,57 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                       :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensett <abensett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 04:10:35 by abensett          #+#    #+#             */
-/*   Updated: 2022/06/16 03:20:44 by abensett         ###   ########.fr       */
+/*   Updated: 2022/06/18 21:08:18 by abensett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
 using std::cout;
 using std::endl;
 
 // Default Constructor
-Cat::Cat(void) : Animal("Cat") {
-    cout << "Cat constructor was called" << endl;
+WrongCat::WrongCat(void) : WrongAnimal("WrongCat") {
+    cout << "WrongCat constructor was called" << endl;
 }
 // Destructor
-Cat::~Cat(void) {
-    cout << "Cat " << _type << " was deconstructed" << endl;
-    delete _Brain;
+WrongCat::~WrongCat(void) {
+    cout << "WrongCat " << _type << " was deconstructed" << endl;
 }
 // Constructor with name
-Cat::Cat(string name) : Animal(name) {
-    cout << "Cat " << _type << " was constructed" << endl;
+WrongCat::WrongCat(string name) : WrongAnimal(name) {
+    cout << "WrongCat " << _type << " was constructed" << endl;
 }
 // Copy Constructor
-Cat::Cat(const Cat &Cat) {
-    *this = Cat;
+WrongCat::WrongCat(const WrongCat &WrongCat) {
+    *this = WrongCat;
 }
 // Copy Assignment Operator
-Cat &Cat::operator=(const Cat &Cat) {
-    cout << "Cat " << Cat._type << " was copied" << endl;
+WrongCat &WrongCat::operator=(const WrongCat &WrongCat) {
+    cout << "WrongCat " << WrongCat._type << " was copied" << endl;
 
-    if (this != &Cat) {
-        _type = Cat._type;
+    if (this != &WrongCat) {
+        _type = WrongCat._type;
     }
 
     return *this;
 }
 
 // Getter for name
-string Cat::getType(void) const {
+string WrongCat::getType(void) const {
     return _type;
 }
 // Setter for name
-void Cat::set_type(string type) {
+void WrongCat::set_type(string type) {
     _type = type;
 }
 
-void Cat::makeSound(void) const {
-    cout << " meows" << endl;
+void WrongCat::makeSound(void) const {
+    cout << " Wrongmeows" << endl;
 }

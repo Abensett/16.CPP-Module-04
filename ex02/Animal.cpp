@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                       :+:      :+:    :+:   */
+/*   Animal.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensett <abensett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,48 +10,46 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Animal.hpp"
 
 using std::cout;
 using std::endl;
 
 // Default Constructor
-Cat::Cat(void) : Animal("Cat") {
-    cout << "Cat constructor was called" << endl;
+Animal::Animal(void) : _type("") {
+    cout << "Animal constructor was called" << endl;
 }
 // Destructor
-Cat::~Cat(void) {
-    cout << "Cat " << _type << " was deconstructed" << endl;
-    delete _Brain;
+Animal::~Animal(void) {
+    cout << "Animal " << _type << " was deconstructed" << endl;
 }
 // Constructor with name
-Cat::Cat(string name) : Animal(name) {
-    cout << "Cat " << _type << " was constructed" << endl;
+Animal::Animal(string name) : _type(name) {
+    cout << "Animal " << _type << " was constructed" << endl;
 }
 // Copy Constructor
-Cat::Cat(const Cat &Cat) {
-    *this = Cat;
+Animal::Animal(const Animal &Animal) {
+    *this = Animal;
 }
 // Copy Assignment Operator
-Cat &Cat::operator=(const Cat &Cat) {
-    cout << "Cat " << Cat._type << " was copied" << endl;
+Animal &Animal::operator=(const Animal &Animal) {
+    cout << "Animal " << Animal._type << " was copied" << endl;
 
-    if (this != &Cat) {
-        _type = Cat._type;
+    if (this != &Animal) {
+        _type = Animal._type;
     }
 
     return *this;
 }
 
 // Getter for name
-string Cat::getType(void) const {
+string Animal::getType(void) const {
     return _type;
 }
 // Setter for name
-void Cat::set_type(string type) {
+void Animal::set_type(string type) {
     _type = type;
 }
-
-void Cat::makeSound(void) const {
-    cout << " meows" << endl;
+void Animal::makeSound(void) const {
+    cout << " I am an animal" << endl;
 }

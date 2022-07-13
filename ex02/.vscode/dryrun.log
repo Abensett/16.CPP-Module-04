@@ -1,0 +1,19 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/abou/Desktop/CPP04/ex01'
+mkdir -p objs/
+c++ -Wall -Wextra -Werror -std=c++98 -I /includes -c main.cpp -o objs/main.o
+mkdir -p objs/
+c++ -Wall -Wextra -Werror -std=c++98 -I /includes -c Animal.cpp -o objs/Animal.o
+mkdir -p objs/
+c++ -Wall -Wextra -Werror -std=c++98 -I /includes -c Cat.cpp -o objs/Cat.o
+mkdir -p objs/
+c++ -Wall -Wextra -Werror -std=c++98 -I /includes -c Dog.cpp -o objs/Dog.o
+mkdir -p objs/
+c++ -Wall -Wextra -Werror -std=c++98 -I /includes -c WrongAnimal.cpp -o objs/WrongAnimal.o
+mkdir -p objs/
+c++ -Wall -Wextra -Werror -std=c++98 -I /includes -c WrongCat.cpp -o objs/WrongCat.o
+printf "\033[2K\r Compiling and linking all the files ⌛"
+c++ -Wall -Wextra -Werror -std=c++98 objs/main.o objs/Animal.o objs/Cat.o objs/Dog.o objs/WrongAnimal.o objs/WrongCat.o -I /includes   -o a.out
+printf "\n[\033[32;1mOK\033[0;m] a.out generated \n"
+make: Leaving directory `/Users/abou/Desktop/CPP04/ex01'
+ 

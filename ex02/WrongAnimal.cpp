@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                       :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensett <abensett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,48 +10,46 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongAnimal.hpp"
 
 using std::cout;
 using std::endl;
 
 // Default Constructor
-Cat::Cat(void) : Animal("Cat") {
-    cout << "Cat constructor was called" << endl;
+WrongAnimal::WrongAnimal(void) : _type("") {
+    cout << "WrongAnimal constructor was called" << endl;
 }
 // Destructor
-Cat::~Cat(void) {
-    cout << "Cat " << _type << " was deconstructed" << endl;
-    delete _Brain;
+WrongAnimal::~WrongAnimal(void) {
+    cout << "WrongAnimal " << _type << " was deconstructed" << endl;
 }
 // Constructor with name
-Cat::Cat(string name) : Animal(name) {
-    cout << "Cat " << _type << " was constructed" << endl;
+WrongAnimal::WrongAnimal(string name) : _type(name) {
+    cout << "WrongAnimal " << _type << " was constructed" << endl;
 }
 // Copy Constructor
-Cat::Cat(const Cat &Cat) {
-    *this = Cat;
+WrongAnimal::WrongAnimal(const WrongAnimal &WrongAnimal) {
+    *this = WrongAnimal;
 }
 // Copy Assignment Operator
-Cat &Cat::operator=(const Cat &Cat) {
-    cout << "Cat " << Cat._type << " was copied" << endl;
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &WrongAnimal) {
+    cout << "WrongAnimal " << WrongAnimal._type << " was copied" << endl;
 
-    if (this != &Cat) {
-        _type = Cat._type;
+    if (this != &WrongAnimal) {
+        _type = WrongAnimal._type;
     }
 
     return *this;
 }
 
 // Getter for name
-string Cat::getType(void) const {
+string WrongAnimal::getType(void) const {
     return _type;
 }
 // Setter for name
-void Cat::set_type(string type) {
+void WrongAnimal::set_type(string type) {
     _type = type;
 }
-
-void Cat::makeSound(void) const {
-    cout << " meows" << endl;
+void WrongAnimal::makeSound(void) const {
+    cout << " I am a Wronganimal" << endl;
 }
