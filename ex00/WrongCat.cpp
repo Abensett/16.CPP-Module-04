@@ -6,7 +6,7 @@
 /*   By: abensett <abensett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 04:10:35 by abensett          #+#    #+#             */
-/*   Updated: 2022/06/18 21:08:18 by abensett         ###   ########.fr       */
+/*   Updated: 2022/07/14 17:34:47 by abensett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ WrongCat::WrongCat(void) : WrongAnimal("WrongCat") {
 WrongCat::~WrongCat(void) {
     cout << "WrongCat " << _type << " was deconstructed" << endl;
 }
-// Constructor with name
-WrongCat::WrongCat(string name) : WrongAnimal(name) {
+// Constructor with type
+WrongCat::WrongCat(string type) : WrongAnimal(type) {
     cout << "WrongCat " << _type << " was constructed" << endl;
 }
 // Copy Constructor
@@ -42,11 +42,11 @@ WrongCat &WrongCat::operator=(const WrongCat &WrongCat) {
     return *this;
 }
 
-// Getter for name
+// Getter for type
 string WrongCat::getType(void) const {
     return _type;
 }
-// Setter for name
+// Setter for type
 void WrongCat::set_type(string type) {
     _type = type;
 }

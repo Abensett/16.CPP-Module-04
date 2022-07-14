@@ -22,12 +22,8 @@ Cat::Cat(void) : Animal("Cat") {
 // Destructor
 Cat::~Cat(void) {
     cout << "Cat " << _type << " was deconstructed" << endl;
-    delete _Brain;
 }
-// Constructor with name
-Cat::Cat(string name) : Animal(name) {
-    cout << "Cat " << _type << " was constructed" << endl;
-}
+
 // Copy Constructor
 Cat::Cat(const Cat &Cat) {
     *this = Cat;
@@ -39,15 +35,14 @@ Cat &Cat::operator=(const Cat &Cat) {
     if (this != &Cat) {
         _type = Cat._type;
     }
-
     return *this;
 }
 
-// Getter for name
+// Getter for type
 string Cat::getType(void) const {
     return _type;
 }
-// Setter for name
+// Setter for type
 void Cat::set_type(string type) {
     _type = type;
 }

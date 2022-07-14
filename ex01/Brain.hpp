@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 
 using std::string;
 
@@ -23,10 +24,9 @@ class Brain
  	public:
 		Brain(void);
 		virtual ~Brain(void);						// utile pour delete
-		explicit Brain(string name);
 		Brain(const Brain &Brain);
 		Brain &operator=(const Brain &Brain);
-		void printFirstIdeas(void);
+		void printFirstIdeas(void) const;
 
 	protected:
     	string 	_ideas[100];

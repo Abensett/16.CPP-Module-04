@@ -20,7 +20,6 @@ class Cat  : virtual public Animal
  	public:
 		Cat(void);
 		virtual ~Cat(void);
-		explicit Cat(string type);
 		Cat(const Cat &Cat);
 		Cat &operator=(const Cat &Cat);
 

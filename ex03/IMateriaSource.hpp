@@ -15,7 +15,7 @@
 
 # include "AMateria.hpp"
 
-class IMateriaSource			// Interface IMateriaSource
+class IMateriaSource			// Interface IMateriaSource = ALL THE MEMBER FUNCTIONS GOTTA BE IMPLEMENTED
 {
 	public:
 		virtual				~IMateriaSource() {}

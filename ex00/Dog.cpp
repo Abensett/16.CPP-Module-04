@@ -23,10 +23,7 @@ Dog::Dog(void) : Animal("Dog") {
 Dog::~Dog(void) {
     cout << "Dog " << _type << " was deconstructed" << endl;
 }
-// Constructor with type
-Dog::Dog(string type) : Animal(type) {
-    cout << "Dog " << _type << " was constructed" << endl;
-}
+
 // Copy Constructor
 Dog::Dog(const Dog &Dog) {
     *this = Dog;

@@ -16,7 +16,7 @@ using std::cout;
 using std::endl;
 
 // Default Constructor
-Cure::Cure(void) : AMateria("cure") 
+Cure::Cure(void) : AMateria("cure")
 {
     cout << "Cure constructor was called" << endl;
 }
@@ -28,10 +28,9 @@ Cure::~Cure(void)
 // Copy Constructor
 Cure::Cure(const Cure &Cure) : AMateria(Cure){
     cout << "Cure copy constructor was called" << endl;
-    *this = Cure;
 }
 // Copy Assignment Operator
-Cure &Cure::operator=(const Cure &Cure) 
+Cure &Cure::operator=(const Cure &Cure)
 {
     cout << "Cure was copied" << endl;
     (void)Cure;

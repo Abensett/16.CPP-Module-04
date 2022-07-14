@@ -21,15 +21,11 @@ Cat::Cat(void) : Animal("Cat") {
     _Brain = new Brain();
 }
 // Destructor
-Cat::~Cat(void) { 
+Cat::~Cat(void) {
     delete _Brain;
     cout << "Cat " << _type << " was deconstructed" << endl;
 }
-// Constructor with name
-Cat::Cat(string name) : Animal(name) {
-    cout << "Cat " << _type << " was constructed" << endl;
-     _Brain = new Brain();
-}
+
 // Copy Constructor
 Cat::Cat(const Cat &Cat) : Animal(Cat), _Brain(new Brain(*(Cat._Brain)))
 {

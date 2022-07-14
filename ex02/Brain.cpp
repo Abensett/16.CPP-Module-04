@@ -11,15 +11,25 @@
 /* ************************************************************************** */
 
 #include "Brain.hpp"
+#include <sstream>
 
 using std::cout;
 using std::endl;
 
+// TO STRING VERSION SSSTREAM -> C++ 98 et non C++11
+static std::string toString(int i) {
+    std::stringstream ss;
+    ss << i;
+
+    return ss.str();
+}
+
 // Default Constructor
 Brain::Brain(void) {
+
     cout << "Brain constructor was called" << endl;
     for (int i =  0; i < 100; i++)
-    		_ideas[i] = "Ramdom idea "  + std::to_string(rand() % 100);
+    		_ideas[i] = "Ramdom idea "  + toString(rand() % 100);
 }
 
 // Destructor
@@ -44,7 +54,7 @@ Brain &Brain::operator=(const Brain &Brain) {
     }
     return *this;
 }
-void Brain::printFirstIdeas(void) {
+void Brain::printFirstIdeas(void) const {
     cout << "IDEAS :" << _ideas[0] << "," << _ideas[1] << "," << _ideas[2] << "," << _ideas[3] << "," << _ideas[4] << endl;
 }
 

@@ -23,8 +23,8 @@ Animal::Animal(void) : _type("") {
 Animal::~Animal(void) {
     cout << "Animal " << _type << " was deconstructed" << endl;
 }
-// Constructor with name
-Animal::Animal(string name) : _type(name) {
+// Constructor with type
+Animal::Animal(string type) : _type(type) {
     cout << "Animal " << _type << " was constructed" << endl;
 }
 // Copy Constructor
@@ -42,11 +42,11 @@ Animal &Animal::operator=(const Animal &Animal) {
     return *this;
 }
 
-// Getter for name
+// Getter for type
 string Animal::getType(void) const {
     return _type;
 }
-// Setter for name
+// Setter for type
 void Animal::set_type(string type) {
     _type = type;
 }

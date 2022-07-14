@@ -19,7 +19,7 @@ class MateriaSource : public IMateriaSource		// concrete class inherited from IM
 {
 	protected:
 		AMateria			*_inventory[4];
-		
+
 	public:
 		MateriaSource(void);
 		MateriaSource(const MateriaSource &materiaSource);

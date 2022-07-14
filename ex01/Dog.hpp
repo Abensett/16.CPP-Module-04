@@ -22,12 +22,11 @@ class Dog : virtual public Animal
  	public:
 		Dog(void);
 		virtual ~Dog(void);
-		explicit Dog(string type);
 		Dog(const Dog &Dog);
 		Dog &operator=(const Dog &Dog);
 
-		string 	getType(void) const;
-		void	set_type(string type);
+		string 			getType(void) const;
+		void			set_type(string type);
 		virtual void 	makeSound(void) const;	// virtual function to be overridden by child classes // non static
 		void			showIdeas(void) const;	// print first ideas
 

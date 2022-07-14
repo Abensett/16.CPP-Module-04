@@ -23,12 +23,12 @@ class Animal
  	public:
 		Animal(void);
 		virtual ~Animal(void);						// utile pour delete
-		explicit Animal(string name);
+		explicit Animal(string type);
 		Animal(const Animal &Animal);
 		Animal &operator=(const Animal &Animal);
 
 		string 	getType(void) const;
-		void	set_type(string name);
+		void	set_type(string type);
 		virtual void	makeSound(void) const;		// virtual function to be overridden by child classes // non static a la compilation
 													// la resolution devient dynamique	= une méthode
 	protected:

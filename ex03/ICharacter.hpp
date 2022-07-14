@@ -17,7 +17,7 @@
 #include "AMateria.hpp"
 
 class AMateria;
-class ICharacter
+class ICharacter 		// Interface  = ALL THE MEMBER FUNCTIONS GOTTA BE IMPLEMENTED IN THE INHERITED CLASS
 {
 	public:
 	virtual ~ICharacter() {}

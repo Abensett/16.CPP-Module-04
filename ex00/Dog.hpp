@@ -20,7 +20,6 @@ class Dog : virtual public Animal
  	public:
 		Dog(void);
 		virtual ~Dog(void);
-		explicit Dog(string type);
 		Dog(const Dog &Dog);
 		Dog &operator=(const Dog &Dog);
 

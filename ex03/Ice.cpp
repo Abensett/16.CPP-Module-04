@@ -16,7 +16,7 @@ using std::cout;
 using std::endl;
 
 // Default Constructor
-Ice::Ice(void) : AMateria("ice") 
+Ice::Ice(void) : AMateria("ice")
 {
     cout << "Ice constructor was called" << endl;
 }
@@ -28,10 +28,9 @@ Ice::~Ice(void)
 // Copy Constructor
 Ice::Ice(const Ice &Ice) : AMateria(Ice){
      cout << "Ice copy constructor was called" << endl;
-    *this = Ice;
 }
 // Copy Assignment Operator
-Ice &Ice::operator=(const Ice &Ice) 
+Ice &Ice::operator=(const Ice &Ice)
 {
     cout << "Ice was copied." << endl;
     (void)Ice;

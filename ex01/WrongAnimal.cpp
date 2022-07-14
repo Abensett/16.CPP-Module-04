@@ -23,8 +23,8 @@ WrongAnimal::WrongAnimal(void) : _type("") {
 WrongAnimal::~WrongAnimal(void) {
     cout << "WrongAnimal " << _type << " was deconstructed" << endl;
 }
-// Constructor with name
-WrongAnimal::WrongAnimal(string name) : _type(name) {
+// Constructor with type
+WrongAnimal::WrongAnimal(string type) : _type(type) {
     cout << "WrongAnimal " << _type << " was constructed" << endl;
 }
 // Copy Constructor
@@ -42,11 +42,11 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &WrongAnimal) {
     return *this;
 }
 
-// Getter for name
+// Getter for type
 string WrongAnimal::getType(void) const {
     return _type;
 }
-// Setter for name
+// Setter for type
 void WrongAnimal::set_type(string type) {
     _type = type;
 }

@@ -22,7 +22,6 @@ class Cat  : virtual public Animal
  	public:
 		Cat			(void);
 		virtual ~Cat(void);
-		explicit Cat(string type);
 		Cat			(const Cat &Cat);
 		Cat &operator=(const Cat &Cat);
 
@@ -30,7 +29,7 @@ class Cat  : virtual public Animal
 		void			set_type(string type);
 		virtual void 	makeSound(void) const;	// virtual function to be overridden by child classes // non static
 		void			showIdeas(void) const;	// print first ideas
-	
+
 	private:
 		Brain	*_Brain;
 };

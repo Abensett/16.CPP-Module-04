@@ -2,7 +2,7 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
+// /*                                                    +:+ +:+         +:+     */
 /*   By: abensett <abensett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 15:12:15 by abensett          #+#    #+#             */
@@ -19,6 +19,7 @@ class Character : public ICharacter
 {
 	protected :
 		AMateria	*_inventory[4];
+		AMateria	*_on_the_floor[100];
 		string 		_name;
 
 	public:
