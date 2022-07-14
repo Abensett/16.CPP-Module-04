@@ -29,7 +29,7 @@ class Animal
 
 		string 	getType(void) const;
 		void	set_type(string type);
-		virtual void	makeSound(void) const = w0;		// virtual function to be overridden by child classes // non static a la compilation
+		virtual void	makeSound(void) const = 0;		// virtual function to be overridden by child classes // non static a la compilation
 													// la resolution devient dynamique	= une méthode
 	protected:
     	string 	_type;
